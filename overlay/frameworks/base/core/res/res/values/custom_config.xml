@@ -63,6 +63,9 @@
     -->
     <integer name="config_deviceSupportsButtonBrightnessControl">2</integer>
 
+    <bool name="config_button_brightness_support">true</bool>
+    <integer name="config_button_brightness_default">128</integer>
+
     <!-- Is the battery LED intrusive? -->
     <bool name="config_intrusiveBatteryLed">true</bool>
 
