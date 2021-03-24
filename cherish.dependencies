@@ -1,0 +1,14 @@
+[
+{
+"repository": "vendor_xiaomi",
+"target_path": "vendor/xiaomi"
+},
+{
+"repository": "device_xiaomi_msm8998-common",
+"target_path": "device/xiaomi/msm8998-common"
+},
+{
+"repository": "kernel_xiaomi_msm8998",
+"target_path": "kernel/xiaomi/msm8998"
+}
+]
