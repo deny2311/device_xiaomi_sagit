@@ -24,6 +24,9 @@ $(call inherit-product device/qcom/common/common.mk)
 # Inherit from sagit device
 $(call inherit-product, device/xiaomi/sagit/device.mk)
 
+# Inherit some common ConquerOS stuff
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Inherit some common ConquerOS stuff.
 $(call inherit-product, vendor/conquer/config/common.mk)
 
