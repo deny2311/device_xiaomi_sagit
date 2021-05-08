@@ -28,9 +28,11 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     android.hardware.ir@1.0-service
 
+ifeq ($(CHERISH_NONGAPPS), true)
 # Prebuilt Google Sounds
 PRODUCT_PACKAGES += \
     PrebuiltGoogleSounds
+endif    
 
 # Properties
 include $(LOCAL_PATH)/vendor_prop.mk
