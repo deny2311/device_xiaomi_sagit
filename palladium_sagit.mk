@@ -21,18 +21,37 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sagit device
 $(call inherit-product, device/xiaomi/sagit/device.mk)
 
-# Inherit some common AOSP stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Palladium stuff.
+$(call inherit-product, vendor/palladium/config/common_full_phone.mk)
 
-# GMS
-$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
-$(call inherit-product-if-exists, vendor/pixelstyle/config.mk)
-$(call inherit-product-if-exists, vendor/apps/GoogleCamera/config.mk)
+# GooglePinYin
+$(call inherit-product-if-exists, vendor/apps/GooglePinYin/config.mk)
+
+# MiuiCamera
+$(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
 
 # OTA
 $(call inherit-product-if-exists, vendor/apps/Updater/config.mk)
 
-PRODUCT_NAME := aosp_sagit_gms
+# PalladiumOS Properties
+TARGET_INCLUDE_WIFI_EXT := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_USES_BLUR := true
+PALLADIUM_BUILDTYPE := UNOFFICIAL
+
+# Maintainer & Device Props
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.palladiumdevice.maintainer=deny2311 \
+    ro.palladiumdevice.cpu=SDM835 \
+    ro.palladiumdevice.display=5.15 \
+    ro.palladiumdevice.displaytype=FULLHD \
+    ro.palladiumdevice.battery=3350mAh \
+    ro.palladiumdevice.camera=12MP+8MP
+   
+PRODUCT_NAME := palladium_sagit
 PRODUCT_DEVICE := sagit
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 6
