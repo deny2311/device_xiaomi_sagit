@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS :=true
+BUILD_BROKEN_DUP_RULES := true
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -21,18 +24,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sagit device
 $(call inherit-product, device/xiaomi/sagit/device.mk)
 
-# Inherit some common AOSP stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Baikal stuff.
+$(call inherit-product, vendor/baikalos/config/common_full_phone.mk)
 
-# GMS
-$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
-$(call inherit-product-if-exists, vendor/pixelstyle/config.mk)
-$(call inherit-product-if-exists, vendor/apps/GoogleCamera/config.mk)
+# GooglePinYin
+$(call inherit-product-if-exists, vendor/apps/GooglePinYin/config.mk)
+
+# MiuiCamera
+$(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
 
 # OTA
 $(call inherit-product-if-exists, vendor/apps/Updater/config.mk)
 
-PRODUCT_NAME := aosp_sagit_gms
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
+
+PRODUCT_NAME := baikalos_sagit
 PRODUCT_DEVICE := sagit
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 6
@@ -45,3 +52,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="sagit-user 8.0.0 OPR1.170623.027 V9.2.3.0.OCAMIEK release-keys"
 
 BUILD_FINGERPRINT := Xiaomi/sagit/sagit:8.0.0/OPR1.170623.027/V9.2.3.0.OCAMIEK:user/release-keys
+
+# BaikalOS Device Maintainer
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="deny2311"
