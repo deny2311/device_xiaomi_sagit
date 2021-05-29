@@ -21,25 +21,29 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sagit device
 $(call inherit-product, device/xiaomi/sagit/device.mk)
 
-# Inherit some common AOSP stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common DOT stuff.
+$(call inherit-product, vendor/dot/config/common.mk)
 
-# GMS
-$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
-$(call inherit-product-if-exists, vendor/pixelstyle/config.mk)
-$(call inherit-product-if-exists, vendor/apps/GoogleCamera/config.mk)
+# GooglePinYin
+$(call inherit-product-if-exists, vendor/apps/GooglePinYin/config.mk)
+
+# MiuiCamera
+$(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
 
 # OTA
 $(call inherit-product-if-exists, vendor/apps/Updater/config.mk)
 
-PRODUCT_NAME := aosp_sagit_gms
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_BLUR := true
+PRODUCT_NAME := dot_sagit
 PRODUCT_DEVICE := sagit
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 6
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_FACE_UNLOCK := true
-
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+TARGET_INCLUDE_STOCK_ARCORE := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="sagit-user 8.0.0 OPR1.170623.027 V9.2.3.0.OCAMIEK release-keys"
