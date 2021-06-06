@@ -1,3 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_sagit.mk \
-    $(LOCAL_DIR)/aosp_sagit_gms.mk
+    $(LOCAL_DIR)/carbon_sagit.mk
+
+COMMON_LUNCH_CHOICES := \
+	carbon_sagit-userdebug \
+	carbon_sagit-user \
+	carbon_sagit-eng
