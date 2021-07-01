@@ -36,7 +36,7 @@ $(call inherit-product-if-exists, vendor/apps/Updater/config.mk)
 # Boot animaton
 TARGET_BOOT_ANIMATION_RES := 1080
 
-KOMODO_GAPPS_TYPE := nogapps
+KOMODO_GAPPS_TYPE := gapps
 
 PRODUCT_NAME := komodo_sagit
 PRODUCT_DEVICE := sagit
