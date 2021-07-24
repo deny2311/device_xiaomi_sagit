@@ -33,6 +33,9 @@ $(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
 # OTA
 $(call inherit-product-if-exists, vendor/apps/Updater/config.mk)
 
+#Build Gapps
+WITH_GMS :=true
+
 PRODUCT_NAME := cherish_sagit
 PRODUCT_DEVICE := sagit
 PRODUCT_BRAND := Xiaomi
