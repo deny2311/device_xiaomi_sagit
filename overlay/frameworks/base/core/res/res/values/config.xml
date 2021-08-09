@@ -143,17 +143,8 @@
          The default is false. -->
     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
   
-    <!-- Whether a software navigation bar should be shown. NOTE: in the 
-future this may be
-         autodetected from the Configuration. -->
-     <bool name="config_showNavigationBar">true</bool>
-
-<!-- Boolean indicating if current platform supports HFP inband ringing -->
-     <bool name="config_supportSystemNavigationKeys">true</bool>
-
-<!-- Whether or not swipe up gesture's opt-in setting is available on this 
-device -->
-     <bool name="config_swipe_up_gesture_setting_available">true</bool>
+    <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
+    <bool name="config_swipe_up_gesture_setting_available">true</bool>
 
 <!-- Set the default dialer package name. -->
     <string name="config_defaultDialer" translatable="false">com.android.dialer</string>
