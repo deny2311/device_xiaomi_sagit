@@ -25,21 +25,21 @@ $(call inherit-product, device/xiaomi/sagit/device.mk)
 $(call inherit-product, vendor/conquer/config/common.mk)
 
 # GooglePinYin
-$(call inherit-product-if-exists, vendor/apps/GooglePinYin/config.mk)
+#$(call inherit-product-if-exists, vendor/apps/GooglePinYin/config.mk)
 
 # MiuiCamera
 $(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
 
 # OTA
-$(call inherit-product-if-exists, vendor/apps/Updater/config.mk)
+#$(call inherit-product-if-exists, vendor/apps/Updater/config.mk)
 
 # Inherit Qualcomm common tree
-$(call inherit-product device/qcom/common/common.mk)
+#$(call inherit-product device/qcom/common/common.mk)
 
-# Inherit some common ConquerOS stuff
+# Inherit some common Xdroid stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := conquer_sagit
+PRODUCT_NAME := xdroid_sagit
 PRODUCT_DEVICE := sagit
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 6
