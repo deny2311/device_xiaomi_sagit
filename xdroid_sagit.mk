@@ -21,8 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sagit device
 $(call inherit-product, device/xiaomi/sagit/device.mk)
 
-# Inherit some common Conquer stuff.
-$(call inherit-product, vendor/conquer/config/common.mk)
+# Inherit some common xdroid stuff.
+$(call inherit-product, vendor/xdroid/config/common.mk)
 
 # GooglePinYin
 #$(call inherit-product-if-exists, vendor/apps/GooglePinYin/config.mk)
