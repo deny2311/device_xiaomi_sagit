@@ -38,6 +38,9 @@ $(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
 
 # Inherit some common Xdroid stuff
 TARGET_BOOT_ANIMATION_RES := 1080
+XDROID_BUILD_TYPE := OBT
+XDROID_BOOT_DARK := true
+XDROID_UI_BLUR := true
 
 PRODUCT_NAME := xdroid_sagit
 PRODUCT_DEVICE := sagit
