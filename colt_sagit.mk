@@ -33,7 +33,7 @@ $(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
 # OTA
 #$(call inherit-product-if-exists, vendor/apps/Updater/config.mk)
 
-TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_BOOT_ANIMATION_RES := 1080x1920
 COLT_BUILD_MAINTAINER := deny2311
 PRODUCT_NAME := colt_sagit
 PRODUCT_DEVICE := sagit
