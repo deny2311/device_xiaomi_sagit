@@ -34,6 +34,7 @@ $(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
 $(call inherit-product-if-exists, vendor/apps/Updater/config.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_PIXEL_CHARGER := true
 TARGET_SUPPORTS_BLUR := true
 PRODUCT_NAME := dot_sagit
 PRODUCT_DEVICE := sagit
