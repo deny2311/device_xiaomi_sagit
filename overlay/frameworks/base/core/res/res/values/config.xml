@@ -152,6 +152,4 @@
     <string name="config_adaptiveChargingSuspendValue" translatable="false">1</string>	
     <string name="config_adaptiveChargingResumeValue" translatable="false">0</string>
 
-     <!-- Set the default phone. -->
-    <string name="config_defaultDialer" translatable="false">com.android.dialer</string>
 </resources>
