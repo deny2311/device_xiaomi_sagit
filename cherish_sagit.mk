@@ -24,15 +24,6 @@ $(call inherit-product, device/xiaomi/sagit/device.mk)
 # Inherit some common Charish stuff.
 $(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
-# GooglePinYin
-$(call inherit-product-if-exists, vendor/apps/GooglePinYin/config.mk)
-
-# MiuiCamera
-$(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
-
-# OTA
-$(call inherit-product-if-exists, vendor/apps/Updater/config.mk)
-
 #Build Gapps
 WITH_GMS :=true
 
@@ -41,7 +32,6 @@ PRODUCT_DEVICE := sagit
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 6
 PRODUCT_MANUFACTURER := Xiaomi
-TARGET_FACE_UNLOCK := true
 
 # Cherish stuff
 TARGET_BOOT_ANIMATION_RES := 1080
