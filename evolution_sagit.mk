@@ -24,15 +24,6 @@ $(call inherit-product, device/xiaomi/sagit/device.mk)
 # Inherit some common Evolution stuff.
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
-# GooglePinYin
-$(call inherit-product-if-exists, vendor/apps/GooglePinYin/config.mk)
-
-# MiuiCamera
-$(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
-
-# OTA
-#$(call inherit-product-if-exists, vendor/apps/Updater/config.mk)
-
 PRODUCT_NAME := evolution_sagit
 PRODUCT_DEVICE := sagit
 PRODUCT_BRAND := Xiaomi
