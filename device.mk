@@ -1,6 +1,3 @@
-# Firmware
-$(call inherit-product, vendor/apps/firmware-sagit/config.mk)
-
 # AAPT
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
