@@ -28,14 +28,17 @@
  */
 
 #include <stdlib.h>
+#include <string.h>
+
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
-
 #include <android-base/properties.h>
+
 #include "property_service.h"
 #include "vendor_init.h"
 
-using android::init::property_set;
+using android::base::GetProperty;
+using std::string;
 
 void property_override(char const prop[], char const value[])
 {
@@ -68,23 +71,13 @@ void set_device_props(const string model, const string name, const string market
         set_ro_build_prop(source, "marketname", marketname);
 	}
 }
-void property_override_dual(char const system_prop[], char const vendor_prop[],
-    char const value[])
-{
-    property_override(system_prop, value);
-    property_override(vendor_prop, value);
-}
-
 void vendor_load_properties()
 {
    set_device_props("Mi 6", "sagit", "Xiaomi Mi 6");
 
-   std::string platform = android::base::GetProperty("ro.board.platform", "");
-
-    if (platform != ANDROID_TARGET)
-        return;
-
-    // fingerprint
-    property_override("ro.build.description", "sagit-user 9 PKQ1.190118.001 V11.0.5.0.PCACNXM release-keys");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "Xiaomi/sagit/sagit:9/PKQ1.190118.001/V11.0.5.0.PCACNXM:user/release-keys");
+    // Set hardware revision
+    property_override("ro.boot.hardware.revision", GetProperty("ro.boot.hwversion", "").c_str());
+    // SafetyNet workaround
+    property_override("ro.boot.verifiedbootstate", "green");
+    property_override("ro.oem_unlock_supported", "0");
 }
