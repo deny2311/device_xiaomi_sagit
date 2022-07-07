@@ -6,10 +6,8 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
 	Drive \
-	GoogleTTS \
 	Music \
 	RecorderPrebuilt \
-	TurboPrebuilt \
 	Videos \
 	YouTube \
 	YouTubeMusicPrebuilt
