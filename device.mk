@@ -32,10 +32,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    RemovePackages
 
-# Prebuilt Google Sounds
-PRODUCT_PACKAGES += \
-    PrebuiltGoogleSounds
-
 # Properties
 include $(LOCAL_PATH)/vendor_prop.mk
 
